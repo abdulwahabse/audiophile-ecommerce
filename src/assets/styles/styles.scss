@@ -1,10 +1,20 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "layout/hero";
+@import 'components/button';
+@import 'components/categories';
+@import 'components/feature-big';
+@import 'components/feature-md-one';
+@import 'components/feature-md-two';
+@import 'components/about';
+
+@import 'layout/hero';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';

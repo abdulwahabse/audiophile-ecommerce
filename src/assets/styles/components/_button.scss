@@ -1,0 +1,45 @@
+.btn {
+    padding: 1.4rem 3.2rem;
+    border: none;
+    font-weight: $font-weight-bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+
+    &-primary {
+        background-color: $color-primary;
+        color: $color-light;
+        transition: all $animation-speed;
+
+        &:hover,
+        &:focus {
+            background-color: $color-primary-light;
+        }
+    }
+
+    &-secondary {
+        background-color: $color-secondary;
+        color: $color-light;
+        transition: all $animation-speed;
+
+        &:hover,
+        &:focus {
+            background-color: $color-secondary-light;
+        }
+    }
+
+    &-outline-secondary {
+        background-color: transparent;
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+        transition: all $animation-speed;
+
+        &:hover,
+        &:focus {
+            background-color: $color-secondary;
+            color: $color-light;
+        }
+    }
+}
