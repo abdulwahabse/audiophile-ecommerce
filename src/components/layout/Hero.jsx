@@ -2,9 +2,7 @@ export default function Hero() {
     return (
         <section className="hero">
             <div className="hero__container container padding-tb-lg ">
-                <h3 className="highlighted-text dark-text secondary-text">
-                    New Product
-                </h3>
+                <h3 className="highlighted-text dark-text">New Product</h3>
                 <article>
                     <h1 className="hero__main-heading heading-large light-text">
                         XX99 MARK II HEADPHONES

@@ -4,7 +4,7 @@ export default function FeatureMedTwo() {
             <div className="feature-md-2__container container">
                 <img
                     className="feature-md-2__image"
-                    src="/src/assets/images/home/mobile/image-earphones-yx1.jpg"
+                    src="/src/assets/images/home/desktop/image-earphones-yx1.jpg"
                     alt="YX1 Earphones"
                 />
                 <div className="feature-md-2__text-container">

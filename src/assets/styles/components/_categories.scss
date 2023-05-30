@@ -6,6 +6,14 @@
 
         // for tablet and above ⬇️
         // gap: $spacing-sm;
+        @include respond(tablet) {
+            flex-direction: row;
+            gap: $spacing-sm;
+        }
+
+        @include respond(desktop) {
+            gap: 3rem;
+        }
     }
 
     &__link {

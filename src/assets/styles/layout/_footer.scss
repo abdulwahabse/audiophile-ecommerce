@@ -17,26 +17,33 @@
             'social social'
             'credits credits';
 
-        // md screen
-        // grid-template-areas:
-        //     'hr hr'
-        //     'logo navigation'
-        //     'about-text about-text'
-        //     'copyright-text social'
-        //     'credits credits';
+        @include respond(tablet) {
+            grid-template-areas:
+                'hr hr'
+                'logo navigation'
+                'about-text about-text'
+                'copyright-text social'
+                'credits credits';
 
-        // // lg screen
-        // grid-template-areas:
-        //     'hr hr'
-        //     'logo navigation'
-        //     'about-text social'
-        //     'copyright-text social'
-        //     'credits credits';
+            .navigation__list {
+                flex-direction: row;
+            }
+        }
+
+        @include respond(desktop) {
+            grid-template-areas:
+                'hr hr'
+                'logo navigation'
+                'about-text social'
+                'copyright-text social'
+                'credits credits';
+        }
     }
 
     &__hr-container {
         grid-area: hr;
         margin-bottom: 5rem;
+        width: 100%;
     }
 
     &__hr {
@@ -44,28 +51,44 @@
         width: 10rem;
         margin-top: 0;
         float: center;
-        // md
-        // float: left;
+
+        @include respond(tablet) {
+            float: left;
+        }
     }
 
     &__logo {
         grid-area: logo;
+
+        @include respond(tablet) {
+            margin-right: auto;
+        }
     }
 
     &__navigation {
         grid-area: navigation;
-        // sm
+
+        @include respond(tablet) {
+            margin-left: auto;
+        }
     }
 
     &__about-text {
         grid-area: about-text;
-        // sm
         text-align: center;
         margin: 0;
+
+        @include respond(tablet) {
+            text-align: left;
+        }
     }
 
     &__copyright-text {
         grid-area: copyright-text;
+
+        @include respond(tablet) {
+            margin-right: auto;
+        }
     }
 
     &__social-media-container {
@@ -74,6 +97,10 @@
         gap: 2rem;
         align-items: center;
         justify-content: end;
+
+        @include respond(tablet) {
+            margin-left: auto;
+        }
     }
 
     &__social-media-link:hover svg path {

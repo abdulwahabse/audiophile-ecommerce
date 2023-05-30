@@ -4,7 +4,7 @@ export default function FeatureMedOne() {
             <div className="feature-md-1__container container">
                 <div className="feature-md-1__content">
                     <img
-                        src="/src/assets/images/home/mobile/image-speaker-zx7.jpg"
+                        src="/src/assets/images/home/desktop/image-speaker-zx7.jpg"
                         alt="speaker"
                         className="feature-md-1__image"
                     />

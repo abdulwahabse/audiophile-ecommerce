@@ -1,18 +1,18 @@
 export default function About() {
     return (
-        <div className="about margin-t-lg margin-b-lg">
+        <section className="about margin-t-lg margin-b-lg">
             <div className="about__container container">
                 <img
                     className="about__image"
-                    src="/src/assets/images/shared/mobile/image-best-gear.jpg"
+                    src="/src/assets/images/shared/desktop/image-best-gear.jpg"
                     alt="a man wearing headphones"
                 />
                 <div className="about__text-container">
-                    <h2 className="heading-large">
+                    <h2 className="about__heading heading-medium">
                         BRINGING YOU THE{' '}
                         <span className="primary-text">BEST</span> AUDIO GEAR
                     </h2>
-                    <p className="paragraph dark-text">
+                    <p className="about__paragraph paragraph dark-text">
                         Located at the heart of New York City, Audiophile is the
                         premier store for high end headphones, earphones,
                         speakers, and audio accessories. We have a large
@@ -24,6 +24,6 @@ export default function About() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

@@ -8,6 +8,17 @@
         border-radius: $border-radius;
         position: relative;
         overflow: hidden;
+
+        @include respond(tablet) {
+            padding-right: 60%;
+            align-items: center;
+        }
+
+        @include respond(desktop) {
+            padding-right: 70%;
+            align-items: center;
+            gap: 4rem;
+        }
     }
 
     &__image {
@@ -16,5 +27,10 @@
         right: 0;
         z-index: -1;
         max-width: 100%;
+
+        @include respond(tablet) {
+            object-fit: cover;
+            width: 100%;
+        }
     }
 }

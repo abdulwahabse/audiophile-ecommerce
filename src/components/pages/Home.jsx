@@ -15,9 +15,6 @@ export default function Home() {
                 <FeatureMedOne />
                 <FeatureMedTwo />
             </section>
-            <section>
-                <About />
-            </section>
         </div>
     );
 }
