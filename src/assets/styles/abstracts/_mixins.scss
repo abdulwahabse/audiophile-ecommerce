@@ -9,19 +9,25 @@ $breakpoint arguement choices:
 1em = 16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 30em) {
-            @content;
-        } //480px
-    }
+    // @if $breakpoint == phone {
+    //     @media only screen and (max-width: 37.5em) {
+    //         @content;
+    //     } //480px
+    // }
     @if $breakpoint == tablet {
-        @media only screen and (min-width: 48em) {
+        // @media only screen and (max-width: 48em) {
+        //     @content;
+        // } //768px
+        @media only screen and (min-width: 37.56em) {
             @content;
-        } //768px
+        } // 601px
     }
     @if $breakpoint == desktop {
-        @media only screen and (min-width: 62em) {
+        // @media only screen and (min-width: 62em) {
+        //     @content;
+        // } //992px
+        @media only screen and (min-width: 77.56em) {
             @content;
-        } //199200px
+        } // 1241px
     }
 }

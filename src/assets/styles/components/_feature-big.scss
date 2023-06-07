@@ -1,5 +1,9 @@
 .feature-big {
-    margin-bottom: $spacing-lg;
+    margin-bottom: $spacing-md;
+
+    @include respond(tablet) {
+        margin-bottom: $spacing-lg;
+    }
 
     &__content {
         display: flex;
@@ -28,7 +32,8 @@
         position: relative;
 
         @include respond(tablet) {
-            width: 50%;
+            // width: 50%;
+            width: 100%;
         }
 
         @include respond(desktop) {

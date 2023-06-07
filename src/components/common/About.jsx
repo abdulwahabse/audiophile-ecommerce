@@ -2,13 +2,28 @@ export default function About() {
     return (
         <section className="about margin-t-lg margin-b-lg">
             <div className="about__container container">
-                <img
+                {/* <img
                     className="about__image"
                     src="/src/assets/images/shared/desktop/image-best-gear.jpg"
                     alt="a man wearing headphones"
-                />
+                /> */}
+                <picture>
+                    <source
+                        media="(min-width: 77.56em)"
+                        srcSet="/src/assets/images/shared/desktop/image-best-gear.jpg"
+                    />
+                    <source
+                        media="(min-width: 37.56em)"
+                        srcSet="/src/assets/images/shared/tablet/image-best-gear.jpg"
+                    />
+                    <img
+                        alt="a man wearing headphones"
+                        className="about__image"
+                        src="/src/assets/images/shared/mobile/image-best-gear.jpg"
+                    />
+                </picture>
                 <div className="about__text-container">
-                    <h2 className="about__heading heading-medium">
+                    <h2 className="about__heading heading-medium-grows">
                         BRINGING YOU THE{' '}
                         <span className="primary-text">BEST</span> AUDIO GEAR
                     </h2>

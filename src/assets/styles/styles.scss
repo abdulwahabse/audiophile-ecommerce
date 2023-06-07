@@ -13,8 +13,18 @@
 @import 'components/feature-md-one';
 @import 'components/feature-md-two';
 @import 'components/about';
+@import 'components/product-card';
+@import 'components/product-card-sm';
+@import 'components/cart-popup';
+@import 'components/back-link';
+@import 'components/input';
+@import 'components/input-radio';
 
 @import 'layout/hero';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/footer';
+
+@import 'pages/product-list';
+@import 'pages/product-details';
+@import 'pages/checkout';

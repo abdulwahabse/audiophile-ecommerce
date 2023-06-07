@@ -3,12 +3,22 @@ export default function FeatureBig() {
         <article className="feature-big">
             <div className="container">
                 <div className="feature-big__content">
-                    <div className="feature-big__image-container">
-                        <img
-                            className="feature-big__image"
-                            src="/src/assets/images/home/desktop/image-speaker-zx9.png"
-                            alt="ZX9 Speaker"
-                        />
+                    <div>
+                        <picture className="feature-big__image-container">
+                            <source
+                                media="(min-width: 77.56em)"
+                                srcSet="/src/assets/images/home/desktop/image-speaker-zx9.png"
+                            />
+                            <source
+                                media="(min-width: 37.56em)"
+                                srcSet="/src/assets/images/home/tablet/image-speaker-zx9.png"
+                            />
+                            <img
+                                alt="ZX9 Speaker"
+                                className="feature-big__image"
+                                src="/src/assets/images/home/mobile/image-speaker-zx9.png"
+                            />
+                        </picture>
                     </div>
                     <div className="feature-big__text">
                         <h2 className="feature-big__heading heading-large light-text">

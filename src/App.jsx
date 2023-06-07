@@ -3,10 +3,14 @@
 // import viteLogo from '/vite.svg'
 // import './styles/css/style.css'
 import Header from './components/layout/Header';
-import Home from './components/pages/Home';
 import Footer from './components/layout/Footer';
-import Categories from './components/common/Categories';
 import About from './components/common/About';
+import Categories from './components/common/Categories';
+import CartPopup from './components/common/CartPopup';
+import Home from './components/pages/Home';
+import ProductList from './components/pages/ProductList';
+import ProductDetails from './components/pages/ProductDetails';
+import Checkout from './components/pages/Checkout';
 
 <style lang="scss">@import "./assets/styles/styles.scss";</style>;
 function App() {
@@ -17,10 +21,14 @@ function App() {
         <>
             <Header />
             <main>
-                <Home />
+                {/* <Home /> */}
+                {/* <ProductList /> */}
+                {/* <ProductDetails /> */}
+                {/* <CartPopup /> */}
+                <Checkout />
             </main>
             {showCategories && <Categories />}
-            <About />
+            {/* <About /> */}
             <Footer />
         </>
     );

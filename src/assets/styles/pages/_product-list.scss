@@ -1,0 +1,27 @@
+.product-list {
+    &__heading-container {
+        background-color: $color-dark;
+        padding: 3.2rem;
+
+        @include respond(tablet) {
+            padding: 9.7rem;
+        }
+    }
+
+    &__heading-container {
+        text-align: center;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+    }
+
+    &__container {
+        margin-top: 6.4rem;
+        margin-bottom: 6.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+    }
+}
