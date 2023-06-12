@@ -114,6 +114,7 @@
     &__paragraph {
         margin: 2rem 0.94rem 6.5rem 0.94rem;
         z-index: 2;
+        color: $color-light;
 
         @include respond(desktop) {
             margin-bottom: 4rem;
