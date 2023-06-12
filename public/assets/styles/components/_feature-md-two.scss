@@ -1,0 +1,68 @@
+.feature-md-2 {
+    margin-top: $spacing-md;
+
+    @include respond(tablet) {
+        margin-top: $spacing-lg;
+    }
+
+    &__container {
+        // display: flex;
+        // flex-direction: column;
+        gap: $spacing-sm;
+        display: grid;
+        // grid-template-columns: 1fr 1fr;
+
+        @include respond(tablet) {
+            // flex-direction: row;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond(desktop) {
+            gap: $spacing-md;
+        }
+    }
+
+    // changes
+    &__image-container {
+        // flex-grow: 1;
+    }
+
+    &__image {
+        border-radius: $border-radius;
+        object-fit: cover;
+
+        // changes
+        max-width: 100%;
+
+        @include respond(tablet) {
+            // flex-grow: 1;
+            // width: 0;
+        }
+
+        @include respond(desktop) {
+            min-width: 100%;
+        }
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing-md;
+        padding: 4.1rem 2.4rem;
+        background-color: $color-gray-light;
+        border-radius: $border-radius;
+
+        @include respond(tablet) {
+            // flex-grow: 1;
+            // width: 0;
+            padding: 0 0 0 4.1rem;
+            align-items: flex-start;
+        }
+
+        @include respond(desktop) {
+            padding: 0 0 0 9.5rem;
+        }
+    }
+}

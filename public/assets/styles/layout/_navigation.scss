@@ -1,0 +1,37 @@
+.navigation {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        // sm
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+        // md
+        // flex-direction: row;
+        // gap: 3rem;
+    }
+
+    &___item {
+        margin-left: 20px;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-light;
+        text-decoration: none;
+        font-size: $default-font-size;
+        font-weight: $font-weight-bold;
+        letter-spacing: $default-letter-spacing;
+        text-transform: uppercase;
+        transition: color $animation-speed ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+}

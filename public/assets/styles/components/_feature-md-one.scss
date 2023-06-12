@@ -1,0 +1,33 @@
+.feature-md-1 {
+    &__content {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__text-container {
+        margin-left: $spacing-md;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        @include respond(tablet) {
+            margin-left: 5rem;
+        }
+    }
+
+    &__image {
+        z-index: -1;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: $border-radius;
+    }
+}

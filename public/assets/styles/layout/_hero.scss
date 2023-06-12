@@ -1,0 +1,61 @@
+.hero {
+    background-image: var(--background-image-hero-mb);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color-secondary;
+
+    @include respond(tablet) {
+        background-image: var(--background-image-hero-tb);
+        background-size: auto 100%;
+    }
+
+    @include respond(desktop) {
+        background-image: var(--background-image-hero-dt);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        @include respond(desktop) {
+            align-items: flex-start;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(desktop) {
+            align-items: flex-start;
+        }
+    }
+
+    &__main-heading {
+        max-width: 55.2rem;
+        text-align: center;
+
+        @include respond(desktop) {
+            text-align: left;
+        }
+    }
+
+    &__paragraph {
+        text-align: center;
+        margin-bottom: 5rem;
+        max-width: 30rem;
+        // padding-left: 15rem;
+        // padding-right: 15rem;
+
+        @include respond(desktop) {
+            text-align: left;
+        }
+    }
+}

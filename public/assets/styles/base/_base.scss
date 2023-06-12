@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+
+    // @include respond(tablet) {
+    //     font-size: 75%; // 1rem = 12px
+    // }
+
+    // @include respond(desktop) {
+    //     font-size: 87.5%; // 1rem = 14px
+    // }
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}

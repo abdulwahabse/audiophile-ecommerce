@@ -1,0 +1,140 @@
+.footer {
+    background-color: $color-secondary;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        // sm screen
+        justify-items: center;
+        gap: 3rem;
+        grid-template-areas:
+            'hr hr'
+            'logo logo'
+            'navigation navigation'
+            'about-text about-text'
+            'copyright-text copyright-text'
+            'social social'
+            'credits credits';
+
+        @include respond(tablet) {
+            grid-template-areas:
+                'hr hr'
+                'logo navigation'
+                'about-text about-text'
+                'copyright-text social'
+                'credits credits';
+
+            .navigation__list {
+                flex-direction: row;
+            }
+        }
+
+        @include respond(desktop) {
+            grid-template-areas:
+                'hr hr'
+                'logo navigation'
+                'about-text social'
+                'copyright-text social'
+                'credits credits';
+        }
+    }
+
+    &__hr-container {
+        grid-area: hr;
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+
+    &__hr {
+        border: 0.2rem solid $color-primary;
+        width: 10rem;
+        margin-top: 0;
+        float: center;
+
+        @include respond(tablet) {
+            float: left;
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+
+        @include respond(tablet) {
+            margin-right: auto;
+        }
+    }
+
+    &__navigation {
+        grid-area: navigation;
+
+        @include respond(tablet) {
+            margin-left: auto;
+        }
+    }
+
+    &__about-text {
+        grid-area: about-text;
+        text-align: center;
+        margin: 0;
+
+        @include respond(tablet) {
+            text-align: left;
+        }
+    }
+
+    &__copyright-text {
+        grid-area: copyright-text;
+
+        @include respond(tablet) {
+            margin-right: auto;
+        }
+    }
+
+    &__social-media-container {
+        grid-area: social;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: end;
+
+        @include respond(tablet) {
+            margin-left: auto;
+        }
+    }
+
+    &__social-media-link:hover svg path {
+        transition: all $animation-speed;
+    }
+
+    &__social-media-link:hover svg path {
+        fill: $color-primary;
+    }
+
+    &__credits-container {
+        grid-area: credits;
+        text-align: center;
+    }
+
+    &__credits-text {
+        margin-bottom: 0.5rem;
+    }
+
+    &__credit-link {
+        font-weight: 500;
+        text-decoration: none;
+        transition: all $animation-speed;
+    }
+
+    &__credit-link:link,
+    &__credit-link:visited {
+        color: $color-light;
+    }
+
+    &__credit-link:hover,
+    &__credit-link:active,
+    &__credit-link:focus {
+        text-shadow: 0 0.1rem 2rem $color-primary;
+        // color: $color-primary;
+    }
+}

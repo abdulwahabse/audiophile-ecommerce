@@ -1,0 +1,29 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &__label {
+        font-size: $default-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    &__input {
+        padding: 1.6rem;
+        border: 1px solid #cfcfcf;
+        border-radius: $border-radius;
+        font-size: 1.4rem;
+        font-weight: $font-weight-bold;
+        background-color: transparent;
+        transition: all $animation-speed;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
+    }
+}

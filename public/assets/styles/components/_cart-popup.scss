@@ -1,0 +1,180 @@
+.cart-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Dark background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12rem;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+    z-index: 100;
+
+    @include respond(tablet) {
+        padding-top: 14rem;
+    }
+
+    @include respond(desktop) {
+        justify-content: flex-end;
+        padding-right: 18rem;
+    }
+
+    &__container {
+        max-width: 34.5rem;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            'cartheading emptycartbtn'
+            'products products'
+            'totaltext totalprice'
+            'checkoutbtn checkoutbtn';
+    }
+
+    &__empty-cart-container {
+        max-width: 34.5rem;
+        background-color: white;
+        padding: 3.2rem;
+        border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__empty-cart-heading {
+        font-size: $default-font-size;
+        color: $color-dark-lighter;
+        margin-bottom: 1.6rem;
+    }
+
+    &__cart-heading {
+        grid-area: cartheading;
+        font-size: 1.8rem;
+        color: $color-dark;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
+
+    &__empty-cart-btn {
+        grid-area: emptycartbtn;
+        color: $color-dark-lighter;
+        background-color: transparent;
+        border: none;
+        font-size: $default-font-size;
+        font-weight: $font-weight-light;
+        text-decoration: underline;
+        transition: all $animation-speed;
+        margin-bottom: 3.2rem;
+    }
+
+    &__empty-cart-btn:hover,
+    &__empty-cart-btn:active,
+    &__empty-cart-btn:focus {
+        color: $color-primary;
+    }
+
+    &__products-container {
+        grid-area: products;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__product-container {
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__product-img-container {
+        width: 6.4rem;
+        height: 6.4rem;
+        overflow: hidden;
+        border-radius: $border-radius;
+    }
+
+    &__product-img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: $border-radius;
+    }
+
+    &__product-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__product-name {
+        font-size: 1.5rem;
+        color: $color-dark;
+    }
+
+    &__product-price {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: $font-weight-bold;
+        color: $color-dark-lighter;
+    }
+
+    &__quantity-container {
+        background-color: $color-gray-light;
+        display: inline-block;
+        margin-left: auto;
+    }
+
+    &__quantity-btn {
+        color: $color-dark-light;
+        font-weight: $font-weight-bold;
+        font-size: $default-font-size;
+        border: none;
+        background-color: $color-gray-light;
+        padding: 0.5rem 1rem;
+        transition: all $animation-speed;
+    }
+
+    &__quantity-btn:hover,
+    &__quantity-btn:active {
+        color: $color-primary;
+        background-color: darken($color-gray-light, 10%);
+    }
+
+    &__quantity-text {
+        font-size: 1.3rem;
+        font-weight: $font-weight-bold;
+        padding: 0 1.5rem;
+    }
+
+    &__total-text {
+        grid-area: totaltext;
+        font-size: 1.5rem;
+        color: $color-dark-lighter;
+        text-transform: uppercase;
+        margin: 3.2rem 0;
+    }
+
+    &__total-price {
+        grid-area: totalprice;
+        font-size: 1.8rem;
+        font-weight: $font-weight-bold;
+        margin: 3.2rem 0;
+        text-align: end;
+    }
+
+    &__checkout-btn {
+        grid-area: checkoutbtn;
+    }
+}
