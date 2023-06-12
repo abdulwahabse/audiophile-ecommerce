@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import { Switch, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './components/layout/Header';
