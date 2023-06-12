@@ -38,7 +38,7 @@ npm install && npm run dev
 ### Built with
 
 - React.js
-- SASS/SCSS
+- Sass/SCSS
 - JavaScript
 - HTML
 - CSS
@@ -48,7 +48,11 @@ npm install && npm run dev
 
 #### React
 
-I learned how to create small and reusable components in React. By breaking down the user interface into smaller pieces, I was able to easily manage and compose these components to build the complete project. This approach not only improved the modularity and maintainability of the code but also enhanced the overall user experience of the application.
+Throughout the development of this project, I not only learned how to create modular React components but also how to effectively manage the routing of different pages within a Single Page Application (SPA). To accomplish this, I made use of React Router, a popular routing library for React.
+
+React Router allowed me to define and configure routes for different pages or views in my application. By mapping URLs to specific components, I was able to create a seamless navigation experience for users, ensuring that the appropriate content is rendered based on the current URL.
+
+By incorporating React Router into my project, I gained valuable knowledge in managing routing in a React-based SPA, enhancing the overall user experience and making the application feel more like a traditional multi-page website.
 
 #### SASS and BEM Methodology
 
@@ -71,3 +75,33 @@ To organize my SCSS codebase effectively, I followed the 7-1 pattern. This patte
 - vendors/: Stores third-party or external stylesheets.
 
 This structure allowed me to keep my code organized, modular, and easily maintainable, making it simpler to collaborate with other developers and update the project in the future.
+
+## Further Work and Improvements
+
+While completing this project, I identified some areas for further work and potential improvements that I would like to address in the future. These include:
+
+### Enhanced Component Modularity
+
+If time permits, I would further divide and refine the React components to enhance their modularity and reusability. By breaking down complex components into smaller, focused ones, I can improve code maintainability and reusability.
+
+### Form Input Validation
+
+Currently, the form in the application includes required inputs, but there is no extensive validation implemented. To improve the user experience, I would focus on implementing validation for each input, ensuring that the entered values meet specific criteria.
+
+### Error Handling and Feedback
+
+Improving error handling and feedback mechanisms is crucial. Clear error messages and visual cues, such as highlighting erroneous fields or displaying inline validation messages, would help users identify and correct errors more effectively.
+
+### Performance Optimization
+
+As the project grows, optimizing performance becomes important. Techniques such as code splitting, lazy loading, and optimizing rendering can ensure smooth and responsive user interactions.
+
+### Accessibility Enhancements
+
+Making the application more accessible is a priority. Adhering to accessibility best practices, such as providing keyboard navigation, descriptive alt text for images, and semantic markup, will ensure a better user experience for all users.
+
+By addressing these areas of improvement, I aim to enhance the functionality, usability, and maintainability of the project, providing a better experience for users and facilitating future development iterations.
+
+## Author
+
+- Abdul Wahab - [@abdulwahabse](https://github.com/abdulwahabse)
