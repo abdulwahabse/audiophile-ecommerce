@@ -82,7 +82,10 @@ export default function Footer() {
                                 Frontend Mentor
                             </a>{' '}
                             and coded by{' '}
-                            <a className="footer__credit-link" href="#">
+                            <a
+                                className="footer__credit-link"
+                                href="https://www.linkedin.com/in/abdulwahabse/"
+                            >
                                 Abdul Wahab
                             </a>
                             .
