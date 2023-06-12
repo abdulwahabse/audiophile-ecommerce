@@ -1,25 +1,26 @@
+import { getImageUrl } from '../../scripts/utils';
+
 export default function About() {
+    const desktopImg = getImageUrl(
+        'assets/images/shared/desktop/image-best-gear.jpg'
+    );
+    const tabletImg = getImageUrl(
+        'assets/images/shared/tablet/image-best-gear.jpg'
+    );
+    const mobileImg = getImageUrl(
+        'assets/images/shared/mobile/image-best-gear.jpg'
+    );
+
     return (
         <section className="about margin-t-lg margin-b-lg">
             <div className="about__container container">
-                {/* <img
-                    className="about__image"
-                    src="/src/assets/images/shared/desktop/image-best-gear.jpg"
-                    alt="a man wearing headphones"
-                /> */}
                 <picture>
-                    <source
-                        media="(min-width: 77.56em)"
-                        srcSet="/src/assets/images/shared/desktop/image-best-gear.jpg"
-                    />
-                    <source
-                        media="(min-width: 37.56em)"
-                        srcSet="/src/assets/images/shared/tablet/image-best-gear.jpg"
-                    />
+                    <source media="(min-width: 77.56em)" srcSet={desktopImg} />
+                    <source media="(min-width: 37.56em)" srcSet={tabletImg} />
                     <img
                         alt="a man wearing headphones"
                         className="about__image"
-                        src="/src/assets/images/shared/mobile/image-best-gear.jpg"
+                        src={mobileImg}
                     />
                 </picture>
                 <div className="about__text-container">

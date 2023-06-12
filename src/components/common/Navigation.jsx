@@ -1,26 +1,53 @@
+import { Link, NavLink } from 'react-router-dom';
+
 export default function Navigation(props) {
     return (
         <nav className={`navigation ${props.className}`}>
             <ul className="navigation__list">
                 <li className="navigation__item">
-                    <a href="#" className="navigation__link">
+                    <NavLink
+                        exact
+                        to="/"
+                        className="navigation__link"
+                        activeStyle={{
+                            color: '#d87d4a',
+                        }}
+                    >
                         Home
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="navigation__item">
-                    <a href="#" className="navigation__link">
+                    <NavLink
+                        to="/headphones"
+                        className="navigation__link"
+                        activeStyle={{
+                            color: '#d87d4a',
+                        }}
+                    >
                         Headphones
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="navigation__item">
-                    <a href="#" className="navigation__link">
+                    <NavLink
+                        to="/speakers"
+                        className="navigation__link"
+                        activeStyle={{
+                            color: '#d87d4a',
+                        }}
+                    >
                         Speakers
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="navigation__item">
-                    <a href="#" className="navigation__link">
+                    <NavLink
+                        to="/earphones"
+                        className="navigation__link"
+                        activeStyle={{
+                            color: '#d87d4a',
+                        }}
+                    >
                         Earphones
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

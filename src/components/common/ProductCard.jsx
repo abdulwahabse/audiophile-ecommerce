@@ -1,5 +1,11 @@
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
+
 export default function ProductCard(props) {
-    console.log(props.isReversed && 'reversed');
+    const desktopImg = getImageUrl(props.imageDesktop);
+    const tabletImg = getImageUrl(props.imageTablet);
+    const mobileImg = getImageUrl(props.imageMobile);
+
     return (
         <article
             className={`product-card ${
@@ -8,18 +14,12 @@ export default function ProductCard(props) {
         >
             <div className="product-card__image-container">
                 <picture>
-                    <source
-                        media="(min-width: 77.56em)"
-                        srcSet={props.imageDesktop}
-                    />
-                    <source
-                        media="(min-width: 37.56em)"
-                        srcSet={props.imageTablet}
-                    />
+                    <source media="(min-width: 77.56em)" srcSet={desktopImg} />
+                    <source media="(min-width: 37.56em)" srcSet={tabletImg} />
                     <img
                         alt={props.imageAlt}
                         className="product-card__image"
-                        src={props.imageMobile}
+                        src={mobileImg}
                     />
                 </picture>
             </div>
@@ -35,9 +35,12 @@ export default function ProductCard(props) {
                 <p className="product-card__desription paragraph">
                     {props.productDescription}
                 </p>
-                <button className="product-card__btn btn btn-primary">
+                <Link
+                    to={`/${props.category}/${props.id}`}
+                    className="product-card__btn btn btn-primary"
+                >
                     See Product
-                </button>
+                </Link>
             </div>
         </article>
     );

@@ -17,6 +17,11 @@
         &:focus {
             background-color: $color-primary-light;
         }
+
+        &:disabled {
+            background-color: $color-primary-disabled;
+            cursor: not-allowed;
+        }
     }
 
     &-secondary {

@@ -1,35 +1,44 @@
 import ProductCard from '../common/ProductCard';
+import Categories from '../common/Categories';
+import About from '../common/About';
 
-export default function ProductList() {
+export default function ProductList(props) {
+    const products = props.products.filter(
+        (product) => product.category === props.category
+    );
+    const productCards = products.map((product, index) => (
+        <ProductCard
+            key={product.id}
+            id={product.id}
+            isReversed={(index + 1) % 2 === 0}
+            isNew={product.new}
+            productName={product.name}
+            category={product.category}
+            productDescription={product.description}
+            imageMobile={product['product-img']['mobile']}
+            imageTablet={product['product-img']['tablet']}
+            imageDesktop={product['product-img']['desktop']}
+            imageAlt={product.name}
+        />
+    ));
+
     return (
-        <section className="product-list">
-            <div className="product-list__heading-container">
-                <h2 className="product-list__heading heading-medium-grows light-text">
-                    Headphones
-                </h2>
-            </div>
-            <div className="product-list__container container">
-                <ProductCard
-                    isReversed={false}
-                    isNew={true}
-                    productName="XX99 Mark II"
-                    category="Headphones"
-                    productDescription="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
-                    imageMobile="/src/assets/images/product-zx9-speaker/mobile/image-product.jpg"
-                    imageTablet="/src/assets/images/product-zx9-speaker/tablet/image-product.jpg"
-                    imageDesktop="/src/assets/images/product-zx9-speaker/desktop/image-product.jpg"
-                />
-                <ProductCard
-                    isReversed={true}
-                    isNew={false}
-                    productName="XX99 Mark II"
-                    category="Headphones"
-                    productDescription="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
-                    imageMobile="/src/assets/images/product-zx9-speaker/mobile/image-product.jpg"
-                    imageTablet="/src/assets/images/product-zx9-speaker/tablet/image-product.jpg"
-                    imageDesktop="/src/assets/images/product-zx9-speaker/desktop/image-product.jpg"
-                />
-            </div>
-        </section>
+        <>
+            <section className="product-list">
+                <div className="product-list__heading-container">
+                    <h2 className="product-list__heading heading-medium-grows light-text">
+                        {props.category}
+                    </h2>
+                </div>
+                <div className="product-list__container container">
+                    {productCards}
+                </div>
+            </section>
+            <Categories
+                categoriesImg={props.categoriesImg}
+                className="margin-t-lg margin-b-lg"
+            />
+            <About />
+        </>
     );
 }

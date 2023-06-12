@@ -57,7 +57,8 @@
             'emoney'
             'cash'
             'emoneynumber'
-            'emoneypin';
+            'emoneypin'
+            'cod';
 
         @include respond(tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -73,7 +74,8 @@
                 'payment payment'
                 'paymentlabel emoney'
                 '. cash'
-                'emoneynumber emoneypin';
+                'emoneynumber emoneypin'
+                'cod cod';
 
             padding: 3rem 2.8rem 3.2rem 2.8rem;
         }
@@ -165,6 +167,18 @@
         }
     }
 
+    &__cod-container {
+        grid-area: cod;
+        display: flex;
+        gap: 3.2rem;
+        align-items: center;
+    }
+
+    &__cod-img {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
     &__summary-container {
         grid-area: summary;
         height: fit-content;
@@ -189,13 +203,19 @@
         grid-area: summaryheading;
     }
 
+    &__summary-products-container {
+        grid-area: summaryproduct;
+        margin-top: 3.2rem;
+        margin-bottom: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     &__summary-product-container {
         display: flex;
         align-items: center;
         gap: 2.4rem;
-        grid-area: summaryproduct;
-        margin-top: 3.2rem;
-        margin-bottom: 3.2rem;
     }
 
     &__summary-product-img-container {

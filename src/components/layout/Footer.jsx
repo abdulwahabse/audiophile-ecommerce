@@ -1,6 +1,9 @@
 import Navigation from '../common/Navigation';
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
 
 export default function Footer() {
+    const logo = getImageUrl('assets/icons/logo.svg');
     const currentYear = new Date().getFullYear();
 
     return (
@@ -11,11 +14,9 @@ export default function Footer() {
                         <hr className="footer__hr" />
                     </div>
 
-                    <img
-                        className="footer__logo"
-                        src="/src/assets/icons/logo.svg"
-                        alt="audiophile logo"
-                    />
+                    <Link to="/" className="footer__logo">
+                        <img src={logo} alt="audiophile logo" />
+                    </Link>
                     <Navigation className="footer__navigation" />
                     <p className="footer__about-text paragraph">
                         Audiophile is an all in one stop to fulfill your audio

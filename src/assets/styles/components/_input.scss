@@ -15,9 +15,15 @@
         font-size: 1.4rem;
         font-weight: $font-weight-bold;
         background-color: transparent;
-    }
+        transition: all $animation-speed;
 
-    &__input::placeholder {
-        color: rgba(0, 0, 0, 0.4);
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
     }
 }

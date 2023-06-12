@@ -30,15 +30,31 @@
     &__container {
         max-width: 34.5rem;
         background-color: white;
-        padding: 20px;
+        padding: 2rem;
         border-radius: 5px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
             'cartheading emptycartbtn'
-            'product quantity'
+            'products products'
             'totaltext totalprice'
             'checkoutbtn checkoutbtn';
+    }
+
+    &__empty-cart-container {
+        max-width: 34.5rem;
+        background-color: white;
+        padding: 3.2rem;
+        border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__empty-cart-heading {
+        font-size: $default-font-size;
+        color: $color-dark-lighter;
+        margin-bottom: 1.6rem;
     }
 
     &__cart-heading {
@@ -68,9 +84,16 @@
         color: $color-primary;
     }
 
-    &__product-container {
-        grid-area: product;
+    &__products-container {
+        grid-area: products;
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__product-container {
+        display: flex;
+        flex-direction: row;
         gap: 0.8rem;
         align-items: center;
         justify-content: flex-start;
@@ -108,12 +131,9 @@
     }
 
     &__quantity-container {
-        grid-area: quantity;
         background-color: $color-gray-light;
         display: inline-block;
-        align-self: end;
-        justify-self: start;
-        margin: auto 0;
+        margin-left: auto;
     }
 
     &__quantity-btn {
@@ -127,8 +147,7 @@
     }
 
     &__quantity-btn:hover,
-    &__quantity-btn:active,
-    &__quantity-btn:focus {
+    &__quantity-btn:active {
         color: $color-primary;
         background-color: darken($color-gray-light, 10%);
     }

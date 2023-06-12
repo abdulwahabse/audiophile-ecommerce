@@ -1,20 +1,18 @@
 .hero {
-    background-image: url(/src/assets/images/home/mobile/image-header.jpg);
+    background-image: var(--background-image-hero-mb);
 
-    // background-size: 100% auto;
     background-size: contain;
-    // background-size: auto 100%;          for tablet
     background-repeat: no-repeat;
     background-position: center;
     background-color: $color-secondary;
 
     @include respond(tablet) {
-        background-image: url(/src/assets/images/home/tablet/image-header.jpg);
+        background-image: var(--background-image-hero-tb);
         background-size: auto 100%;
     }
 
     @include respond(desktop) {
-        background-image: url(/src/assets/images/home/desktop/image-hero.jpg);
+        background-image: var(--background-image-hero-dt);
     }
 
     &__container {

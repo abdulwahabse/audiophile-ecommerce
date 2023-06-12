@@ -5,16 +5,20 @@ import FeatureMedOne from '../common/FeatureMedOne';
 import FeatureMedTwo from '../common/FeatureMedTwo';
 import About from '../common/About';
 
-export default function Home() {
+export default function Home(props) {
     return (
-        <div>
-            <Hero />
-            <Categories />
+        <>
+            <Hero products={props.products} />
+            <Categories
+                categoriesImg={props.categoriesImg}
+                className="margin-t-lg margin-b-lg"
+            />
             <section>
-                <FeatureBig />
-                <FeatureMedOne />
-                <FeatureMedTwo />
+                <FeatureBig products={props.products} />
+                <FeatureMedOne products={props.products} />
+                <FeatureMedTwo products={props.products} />
             </section>
-        </div>
+            <About />
+        </>
     );
 }

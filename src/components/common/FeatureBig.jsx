@@ -1,4 +1,17 @@
-export default function FeatureBig() {
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
+
+export default function FeatureBig(props) {
+    const featuredProduct = props.products.find(
+        (product) =>
+            product.featured.isFeatured === true &&
+            product.featured.on === 'featured-product-big'
+    );
+
+    const desktopImg = getImageUrl(featuredProduct.featured.img.desktop);
+    const tabletImg = getImageUrl(featuredProduct.featured.img.tablet);
+    const mobileImg = getImageUrl(featuredProduct.featured.img.mobile);
+
     return (
         <article className="feature-big">
             <div className="container">
@@ -7,30 +20,33 @@ export default function FeatureBig() {
                         <picture className="feature-big__image-container">
                             <source
                                 media="(min-width: 77.56em)"
-                                srcSet="/src/assets/images/home/desktop/image-speaker-zx9.png"
+                                srcSet={desktopImg}
                             />
                             <source
                                 media="(min-width: 37.56em)"
-                                srcSet="/src/assets/images/home/tablet/image-speaker-zx9.png"
+                                srcSet={tabletImg}
                             />
                             <img
                                 alt="ZX9 Speaker"
                                 className="feature-big__image"
-                                src="/src/assets/images/home/mobile/image-speaker-zx9.png"
+                                src={mobileImg}
                             />
                         </picture>
                     </div>
                     <div className="feature-big__text">
                         <h2 className="feature-big__heading heading-large light-text">
-                            ZX9 Speaker
+                            {featuredProduct.name}
                         </h2>
                         <p className="feature-big__paragraph paragraph">
                             Upgrade to premium speakers that are phenomenally
                             built to deliver truly remarkable sound.
                         </p>
-                        <a href="#" className="btn btn-secondary">
+                        <Link
+                            to={`/${featuredProduct.category}/${featuredProduct.id}`}
+                            className="btn btn-secondary"
+                        >
                             See Product
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

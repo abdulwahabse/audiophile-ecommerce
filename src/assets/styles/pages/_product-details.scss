@@ -94,8 +94,7 @@
     }
 
     &__quantity-btn:hover,
-    &__quantity-btn:active,
-    &__quantity-btn:focus {
+    &__quantity-btn:active {
         color: $color-primary;
         background-color: darken($color-gray-light, 10%);
     }

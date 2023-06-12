@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function ProductCardSm(props) {
     return (
         <div className={`product-card-sm ${props.className}`}>
@@ -5,25 +7,28 @@ export default function ProductCardSm(props) {
                 <picture>
                     <source
                         media="(min-width: 77.56em)"
-                        srcSet="/src/assets/images/shared/desktop/image-xx99-mark-one-headphones.jpg"
+                        srcSet={props.imgDesktop}
                     />
                     <source
                         media="(min-width: 37.56em)"
-                        srcSet="/src/assets/images/shared/tablet/image-xx99-mark-one-headphones.jpg"
+                        srcSet={props.imgTablet}
                     />
                     <img
-                        alt="xx99 mark one headphones"
+                        alt={props.alt}
                         className="product-card-sm__image"
-                        src="/src/assets/images/shared/mobile/image-xx99-mark-one-headphones.jpg"
+                        src={props.imgMobile}
                     />
                 </picture>
             </div>
-            <h2 className="product-card-sm__heading heading-medium">
-                XX99 Mark I
+            <h2 className="product-card-sm__heading heading-medium text-center">
+                {props.productName}
             </h2>
-            <button className="product-card-sm__btn btn btn-primary">
+            <Link
+                to={`/${props.category}/${props.id}`}
+                className="product-card-sm__btn btn btn-primary"
+            >
                 See Product
-            </button>
+            </Link>
         </div>
     );
 }

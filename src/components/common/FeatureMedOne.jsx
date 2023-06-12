@@ -1,4 +1,17 @@
-export default function FeatureMedOne() {
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
+
+export default function FeatureMedOne(props) {
+    const featuredProduct = props.products.find(
+        (product) =>
+            product.featured.isFeatured === true &&
+            product.featured.on === 'featured-product-mg-one'
+    );
+
+    const desktopImg = getImageUrl(featuredProduct.featured.img.desktop);
+    const tabletImg = getImageUrl(featuredProduct.featured.img.tablet);
+    const mobileImg = getImageUrl(featuredProduct.featured.img.mobile);
+
     return (
         <article className="feature-md-1">
             <div className="feature-md-1__container container">
@@ -6,23 +19,28 @@ export default function FeatureMedOne() {
                     <picture>
                         <source
                             media="(min-width: 77.56em)"
-                            srcSet="/src/assets/images/home/desktop/image-speaker-zx7.jpg"
+                            srcSet={desktopImg}
                         />
                         <source
                             media="(min-width: 37.56em)"
-                            srcSet="/src/assets/images/home/tablet/image-speaker-zx7.jpg"
+                            srcSet={tabletImg}
                         />
                         <img
                             alt="ZX7 Speaker"
                             className="feature-md-1__image"
-                            src="/src/assets/images/home/mobile/image-speaker-zx7.jpg"
+                            src={mobileImg}
                         />
                     </picture>
                     <div className="feature-md-1__text-container">
-                        <h2 className="heading-medium">ZK9 Speaker</h2>
-                        <button className="btn btn-outline-secondary">
+                        <h2 className="heading-medium">
+                            {featuredProduct.name}
+                        </h2>
+                        <Link
+                            to={`/${featuredProduct.category}/${featuredProduct.id}`}
+                            className="btn btn-outline-secondary"
+                        >
                             See Product
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

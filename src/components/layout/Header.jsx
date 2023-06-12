@@ -1,6 +1,34 @@
+import { useState } from 'react';
 import Navigation from '../common/Navigation';
+import Categories from '../common/Categories';
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
 
-export default function Header() {
+export default function Header(props) {
+    const [showCartPopup, setShowCartPopup] = useState(false);
+    const logo = getImageUrl('assets/icons/logo.svg');
+
+    const totalQuantity = props.cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
+    const handleCartClick = () => {
+        props.setShowCartPopup(true);
+    };
+
+    const handleCartBackgroundClick = (e) => {
+        console.log('clicked', e.target);
+        if (
+            e.target.className === 'header__categories-popup' ||
+            e.target.className.startsWith('categories__')
+        ) {
+            setShowCartPopup(false);
+            document.getElementById('navi-toggle').checked = false;
+            console.log('❌');
+        }
+    };
+
     return (
         <header className="header">
             <div className="container">
@@ -9,21 +37,27 @@ export default function Header() {
                         type="checkbox"
                         className="header__checkbox"
                         id="navi-toggle"
+                        onClick={() => {
+                            setShowCartPopup((prevState) => !prevState);
+                        }}
                     />
                     <label htmlFor="navi-toggle" className="header__button">
                         <span className="header__icon">&nbsp;</span>
                     </label>
-                    <a href="#" className="header__logo-link">
+                    <Link to="/" className="header__logo-link">
                         <img
                             className="header__logo"
-                            src="/src/assets/icons/logo.svg"
+                            src={logo}
                             alt="audiophile logo"
                         />
-                    </a>
+                    </Link>
 
                     <Navigation className="header__navigation" />
 
-                    <div className="header__cart-container">
+                    <div
+                        className="header__cart-container"
+                        onClick={handleCartClick}
+                    >
                         <svg
                             className="header__cart-icon"
                             width="23"
@@ -36,10 +70,24 @@ export default function Header() {
                                 fill-rule="nonzero"
                             />
                         </svg>
-                        <span className="header__cart-badge">1</span>
+                        {props.cart.length ? (
+                            <span className="header__cart-badge">
+                                {totalQuantity}
+                            </span>
+                        ) : null}
                     </div>
                 </div>
             </div>
+            {showCartPopup && (
+                <div
+                    className="header__categories-popup"
+                    onClick={handleCartBackgroundClick}
+                >
+                    <div className="header__categories-popup-container">
+                        <Categories categoriesImg={props.categoriesImg} />
+                    </div>
+                </div>
+            )}
         </header>
     );
 }

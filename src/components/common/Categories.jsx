@@ -1,13 +1,25 @@
-export default function Categories() {
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../scripts/utils';
+
+export default function Categories(props) {
+    const earphonesImg = getImageUrl(props.categoriesImg.earphones);
+    const speakersImg = getImageUrl(props.categoriesImg.speakers);
+    const headphonesImg = getImageUrl(props.categoriesImg.headphones);
+    const arrowIcon = getImageUrl('assets/icons/icon-arrow-right.svg');
+
     return (
-        <div className="categories margin-t-lg margin-b-lg">
+        // <div className="categories margin-t-lg margin-b-lg">
+        <div className={`categories ${props.className}`}>
             <div className="container">
                 {/* headphones category */}
-                <a href="#" className="categories__link categories__link--1">
+                <Link
+                    to="/headphones"
+                    className="categories__link categories__link--1"
+                >
                     <div className="categories__category">
                         <img
                             className="categories__image"
-                            src="/src/assets/images/shared/desktop/image-headphones.png"
+                            src={headphonesImg}
                             alt="headphones"
                         />
                         <h2 className="categories__heading heading-small">
@@ -19,18 +31,21 @@ export default function Categories() {
                             </p>
                             <img
                                 className="categories__cta-icon categories__cta-icon--1"
-                                src="/src/assets/icons/icon-arrow-right.svg"
+                                src={arrowIcon}
                                 alt="arrow right"
                             />
                         </div>
                     </div>
-                </a>
+                </Link>
                 {/* speakers category */}
-                <a href="#" className="categories__link categories__link--2">
+                <Link
+                    to="/speakers"
+                    className="categories__link categories__link--2"
+                >
                     <div className="categories__category">
                         <img
                             className="categories__image"
-                            src="/src/assets/images/shared/desktop/image-speakers.png"
+                            src={speakersImg}
                             alt="headphones"
                         />
                         <h2 className="categories__heading heading-small">
@@ -42,18 +57,21 @@ export default function Categories() {
                             </p>
                             <img
                                 className="categories__cta-icon categories__cta-icon--2"
-                                src="/src/assets/icons/icon-arrow-right.svg"
+                                src={arrowIcon}
                                 alt="arrow right"
                             />
                         </div>
                     </div>
-                </a>
+                </Link>
                 {/* earphones category */}
-                <a href="#" className="categories__link categories__link--1">
+                <Link
+                    to="/earphones"
+                    className="categories__link categories__link--1"
+                >
                     <div className="categories__category">
                         <img
                             className="categories__image categories__image--3"
-                            src="/src/assets/images/shared/desktop/image-earphones.png"
+                            src={earphonesImg}
                             alt="headphones"
                         />
                         <h2 className="categories__heading heading-small">
@@ -65,12 +83,12 @@ export default function Categories() {
                             </p>
                             <img
                                 className="categories__cta-icon categories__cta-icon--3"
-                                src="/src/assets/icons/icon-arrow-right.svg"
+                                src={arrowIcon}
                                 alt="arrow right"
                             />
                         </div>
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     );

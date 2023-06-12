@@ -7,6 +7,9 @@ export default function InputRadio(props) {
                 id={props.id}
                 name={props.name}
                 value={props.value}
+                onChange={props.onChange}
+                checked={props.checked}
+                required={props.required}
             />
             <label className="input-radio__label" htmlFor={props.id}>
                 {props.label}
