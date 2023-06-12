@@ -13,7 +13,7 @@ This represents a solution for the [Audiophile e-commerce website challenge prov
   - [What I learned](#what-i-learned)
   - [Further Work and Improvements](#further-work-and-improvements)
 - [Author](#author)
-- 
+
 ## Overview
 
 ### The challenge
