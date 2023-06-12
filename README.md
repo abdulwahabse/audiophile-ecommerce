@@ -16,3 +16,7 @@ Users should be able to:
   - Ensure that an additional $50 is added for shipping to all orders :heavy_check_mark:
   - Calculate VAT as 20% of the product total, excluding shipping costs :heavy_check_mark:
 - See an order confirmation modal displaying an order summary after successfully completing the checkout process :heavy_check_mark:
+
+### Screenshot
+
+![](./screenshot.png)
