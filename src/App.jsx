@@ -1,5 +1,5 @@
-import { Switch, Route, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import CartPopup from './components/common/CartPopup';
@@ -14,6 +14,10 @@ import data from './data/data.json';
 function App() {
     const [cart, setCart] = useState([]);
     const [showCartPopup, setShowCartPopup] = useState(false);
+    const location = useLocation();
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     useEffect(() => {
         console.log('cart', cart);
