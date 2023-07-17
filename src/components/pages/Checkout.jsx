@@ -277,7 +277,7 @@ export default function Checkout(props) {
                                 <img
                                     className="checkout__cod-img"
                                     src={getImageUrl(
-                                        'assets/icons/icon-cash-on-delivery.svg'
+                                        'icons/icon-cash-on-delivery.svg'
                                     )}
                                     alt="Cash on Delivery"
                                 />

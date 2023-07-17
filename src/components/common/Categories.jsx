@@ -5,10 +5,9 @@ export default function Categories(props) {
     const earphonesImg = getImageUrl(props.categoriesImg.earphones);
     const speakersImg = getImageUrl(props.categoriesImg.speakers);
     const headphonesImg = getImageUrl(props.categoriesImg.headphones);
-    const arrowIcon = getImageUrl('assets/icons/icon-arrow-right.svg');
+    const arrowIcon = getImageUrl('icons/icon-arrow-right.svg');
 
     return (
-        // <div className="categories margin-t-lg margin-b-lg">
         <div className={`categories ${props.className}`}>
             <div className="container">
                 {/* headphones category */}

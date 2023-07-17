@@ -68,7 +68,7 @@ export default function OrderPopup(props) {
             <div className="order-popup__container">
                 <img
                     className="order-popup__check-img"
-                    src={getImageUrl('assets/icons/icon-check-mark.svg')}
+                    src={getImageUrl('icons/icon-check-mark.svg')}
                     alt="check mark"
                 />
                 <h2 className="order-popup__title heading-medium-grows-2">

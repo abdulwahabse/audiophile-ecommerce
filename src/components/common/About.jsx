@@ -1,15 +1,9 @@
 import { getImageUrl } from '../../scripts/utils';
 
 export default function About() {
-    const desktopImg = getImageUrl(
-        'assets/images/shared/desktop/image-best-gear.jpg'
-    );
-    const tabletImg = getImageUrl(
-        'assets/images/shared/tablet/image-best-gear.jpg'
-    );
-    const mobileImg = getImageUrl(
-        'assets/images/shared/mobile/image-best-gear.jpg'
-    );
+    const desktopImg = getImageUrl('images/shared/desktop/image-best-gear.jpg');
+    const tabletImg = getImageUrl('images/shared/tablet/image-best-gear.jpg');
+    const mobileImg = getImageUrl('images/shared/mobile/image-best-gear.jpg');
 
     return (
         <section className="about margin-t-lg margin-b-lg">

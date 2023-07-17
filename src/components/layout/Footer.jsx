@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getImageUrl } from '../../scripts/utils';
 
 export default function Footer() {
-    const logo = getImageUrl('assets/icons/logo.svg');
+    const logo = getImageUrl('icons/logo.svg');
     const currentYear = new Date().getFullYear();
 
     return (

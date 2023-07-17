@@ -1,5 +1,5 @@
 function getImageUrl(path) {
-    path = '/' + path;
+    path = '' + path;
     return new URL(path, import.meta.url).href;
 }
 

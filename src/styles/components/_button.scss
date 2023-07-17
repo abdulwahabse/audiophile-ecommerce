@@ -13,8 +13,7 @@
         color: $color-light;
         transition: all $animation-speed;
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: $color-primary-light;
         }
 
@@ -29,8 +28,7 @@
         color: $color-light;
         transition: all $animation-speed;
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: $color-secondary-light;
         }
     }
@@ -41,8 +39,7 @@
         border: 1px solid $color-secondary;
         transition: all $animation-speed;
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: $color-secondary;
             color: $color-light;
         }

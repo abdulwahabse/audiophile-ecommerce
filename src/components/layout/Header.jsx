@@ -3,10 +3,11 @@ import Navigation from '../common/Navigation';
 import Categories from '../common/Categories';
 import { Link } from 'react-router-dom';
 import { getImageUrl } from '../../scripts/utils';
+import logo from '/assets/icons/logo.svg';
 
 export default function Header(props) {
     const [showCartPopup, setShowCartPopup] = useState(false);
-    const logo = getImageUrl('assets/icons/logo.svg');
+    // const logo = getImageUrl('assets/icons/logo.svg');
 
     const totalQuantity = props.cart.reduce(
         (total, item) => total + item.quantity,
