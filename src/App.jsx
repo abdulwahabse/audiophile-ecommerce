@@ -14,10 +14,6 @@ import data from './data/data.json';
 function App() {
     const [cart, setCart] = useState([]);
     const [showCartPopup, setShowCartPopup] = useState(false);
-    const location = useLocation();
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
 
     useEffect(() => {
         console.log('cart', cart);
