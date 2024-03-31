@@ -6,7 +6,10 @@ export default function About() {
     const mobileImg = getImageUrl('images/shared/mobile/image-best-gear.jpg');
 
     return (
-        <section className="about margin-t-lg margin-b-lg">
+        <section
+            aria-label="About Us"
+            className="about margin-t-lg margin-b-lg"
+        >
             <div className="about__container container">
                 <picture>
                     <source media="(min-width: 77.56em)" srcSet={desktopImg} />
