@@ -127,7 +127,7 @@ export default function ProductDetails(props) {
                         <h2 className="product-details__heading heading-medium">
                             {product.name}
                         </h2>
-                        <p className="product-details__desription paragraph">
+                        <p className="product-details__desription paragraph-in-light-bg">
                             {product.description}
                         </p>
                         <p className="product-details__price">
@@ -166,7 +166,7 @@ export default function ProductDetails(props) {
                             Features
                         </h2>
                     </div>
-                    <p className="product-details__features-description paragraph">
+                    <p className="product-details__features-description paragraph-in-light-bg">
                         {product.features}
                     </p>
 

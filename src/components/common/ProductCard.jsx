@@ -32,7 +32,7 @@ export default function ProductCard(props) {
                 <h2 className="product-card__heading heading-medium">
                     {props.productName} {props.category}
                 </h2>
-                <p className="product-card__desription paragraph">
+                <p className="product-card__desription paragraph-in-light-bg">
                     {props.productDescription}
                 </p>
                 <Link

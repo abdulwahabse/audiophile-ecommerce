@@ -25,7 +25,7 @@ export default function About() {
                         BRINGING YOU THE{' '}
                         <span className="primary-text">BEST</span> AUDIO GEAR
                     </h2>
-                    <p className="about__paragraph paragraph dark-text">
+                    <p className="about__paragraph paragraph-in-light-bg">
                         Located at the heart of New York City, Audiophile is the
                         premier store for high end headphones, earphones,
                         speakers, and audio accessories. We have a large

@@ -53,7 +53,7 @@
 
     &__empty-cart-heading {
         font-size: $default-font-size;
-        color: $color-dark-lighter;
+        color: $color-dark-light;
         margin-bottom: 1.6rem;
     }
 
@@ -68,7 +68,7 @@
 
     &__empty-cart-btn {
         grid-area: emptycartbtn;
-        color: $color-dark-lighter;
+        color: $color-dark-light;
         background-color: transparent;
         border: none;
         font-size: $default-font-size;
@@ -127,7 +127,7 @@
         margin: 0;
         font-size: 1.4rem;
         font-weight: $font-weight-bold;
-        color: $color-dark-lighter;
+        color: $color-dark-light;
     }
 
     &__quantity-container {
@@ -161,7 +161,7 @@
     &__total-text {
         grid-area: totaltext;
         font-size: 1.5rem;
-        color: $color-dark-lighter;
+        color: $color-dark-light;
         text-transform: uppercase;
         margin: 3.2rem 0;
     }

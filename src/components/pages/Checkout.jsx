@@ -281,7 +281,7 @@ export default function Checkout(props) {
                                     )}
                                     alt="Cash on Delivery"
                                 />
-                                <p className="paragraph">
+                                <p className="paragraph-in-light-bg">
                                     The ‘Cash on Delivery’ option enables you to
                                     pay in cash when our delivery courier
                                     arrives at your residence. Just make sure

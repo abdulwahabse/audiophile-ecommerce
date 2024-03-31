@@ -34,7 +34,7 @@ export default function Hero(props) {
                     <h1 className="hero__main-heading heading-large light-text">
                         {featuredProduct.name}
                     </h1>
-                    <p className="hero__paragraph paragraph">
+                    <p className="hero__paragraph paragraph-in-dark-bg">
                         {featuredProduct.featured.text}
                     </p>
                     <Link

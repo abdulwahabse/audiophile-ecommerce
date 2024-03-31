@@ -50,14 +50,14 @@ export default function Footer() {
                         <img src={logo} alt="audiophile logo" />
                     </Link>
                     <Navigation className="footer__navigation" />
-                    <p className="footer__about-text paragraph">
+                    <p className="footer__about-text paragraph-in-dark-bg">
                         Audiophile is an all in one stop to fulfill your audio
                         needs. We're a small team of music lovers and sound
                         specialists who are devoted to helping you get the most
                         out of personal audio. Come and visit our demo facility
                         - we’re open 7 days a week.
                     </p>
-                    <p className="footer__copyright-text paragraph">
+                    <p className="footer__copyright-text paragraph-in-dark-bg">
                         Copyright {currentYear}. All Rights Reserved
                     </p>
                     <div className="footer__social-media-container">
@@ -88,7 +88,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <div className="footer__credits-container">
-                        <p className="footer__credits-text paragraph">
+                        <p className="footer__credits-text paragraph-in-dark-bg">
                             Challenge by{' '}
                             <a
                                 className="footer__credit-link"
