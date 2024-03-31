@@ -27,11 +27,27 @@
         letter-spacing: $default-letter-spacing;
         text-transform: uppercase;
         transition: color $animation-speed ease-in-out;
+        position: relative;
+        padding-bottom: 5px;
 
         &:hover,
         &:active,
         &:focus {
             color: $color-primary;
         }
+    }
+
+    .active {
+        color: #c35007;
+    }
+
+    .active:before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 1px;
+        bottom: 0;
+        left: 0%;
+        border-bottom: 2px solid #c35007;
     }
 }
