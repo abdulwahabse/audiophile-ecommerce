@@ -21,7 +21,11 @@ export default function Hero(props) {
     };
 
     return (
-        <section className="hero" style={style}>
+        <section
+            aria-label="Hero Section: Featured Product"
+            className="hero"
+            style={style}
+        >
             <div className="hero__container container padding-tb-lg ">
                 {featuredProduct.new && (
                     <h3 className="highlighted-text dark-text">New Product</h3>

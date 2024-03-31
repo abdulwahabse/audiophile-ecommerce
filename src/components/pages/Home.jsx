@@ -13,7 +13,7 @@ export default function Home(props) {
                 categoriesImg={props.categoriesImg}
                 className="margin-t-lg margin-b-lg"
             />
-            <section>
+            <section aria-label="Featured Products: Top Picks">
                 <FeatureBig products={props.products} />
                 <FeatureMedOne products={props.products} />
                 <FeatureMedTwo products={props.products} />
