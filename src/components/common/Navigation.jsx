@@ -1,6 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Navigation(props) {
+    const activeStyle = {
+        color: '#c35007',
+    };
+
     return (
         <nav className={`navigation ${props.className}`}>
             <ul className="navigation__list">
@@ -9,9 +13,7 @@ export default function Navigation(props) {
                         exact
                         to="/"
                         className="navigation__link"
-                        activeStyle={{
-                            color: '#d87d4a',
-                        }}
+                        activeStyle={activeStyle}
                     >
                         Home
                     </NavLink>
@@ -20,9 +22,7 @@ export default function Navigation(props) {
                     <NavLink
                         to="/headphones"
                         className="navigation__link"
-                        activeStyle={{
-                            color: '#d87d4a',
-                        }}
+                        activeStyle={activeStyle}
                     >
                         Headphones
                     </NavLink>
@@ -31,9 +31,7 @@ export default function Navigation(props) {
                     <NavLink
                         to="/speakers"
                         className="navigation__link"
-                        activeStyle={{
-                            color: '#d87d4a',
-                        }}
+                        activeStyle={activeStyle}
                     >
                         Speakers
                     </NavLink>
@@ -42,9 +40,7 @@ export default function Navigation(props) {
                     <NavLink
                         to="/earphones"
                         className="navigation__link"
-                        activeStyle={{
-                            color: '#d87d4a',
-                        }}
+                        activeStyle={activeStyle}
                     >
                         Earphones
                     </NavLink>
