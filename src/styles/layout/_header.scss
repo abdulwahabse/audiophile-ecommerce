@@ -105,6 +105,9 @@
 
     &__cart-container {
         position: relative;
+        display: block;
+        background-color: transparent;
+        border: none;
     }
 
     &__cart-icon {
