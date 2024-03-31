@@ -4,9 +4,13 @@ export default function BackBtn(props) {
 
     return (
         <div className={props.className}>
-            <button onClick={() => history.go(-1)} className="back-btn">
+            <span
+                role="link"
+                onClick={() => history.go(-1)}
+                className="back-btn"
+            >
                 Go Back
-            </button>
+            </span>
         </div>
     );
 }
