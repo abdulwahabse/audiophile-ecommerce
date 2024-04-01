@@ -28,7 +28,9 @@ export default function Hero(props) {
         >
             <div className="hero__container container padding-tb-lg ">
                 {featuredProduct.new && (
-                    <h3 className="highlighted-text dark-text">New Product</h3>
+                    <span className="highlighted-text dark-text">
+                        New Product
+                    </span>
                 )}
                 <article>
                     <h1 className="hero__main-heading heading-large light-text">

@@ -12,6 +12,7 @@ export default function Categories(props) {
             aria-label="Product Categories"
             className={`categories ${props.className}`}
         >
+            <h3 className="visually-hidden">Shop By Category</h3>
             <ul className="container">
                 {/* headphones category */}
                 <li className="categories__li">
@@ -25,9 +26,9 @@ export default function Categories(props) {
                                 src={headphonesImg}
                                 alt=""
                             />
-                            <h3 className="categories__heading heading-small">
+                            <h4 className="categories__heading heading-small">
                                 Headphones
-                            </h3>
+                            </h4>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--1">
                                     Shop
@@ -53,9 +54,9 @@ export default function Categories(props) {
                                 src={speakersImg}
                                 alt=""
                             />
-                            <h3 className="categories__heading heading-small">
+                            <h4 className="categories__heading heading-small">
                                 Speakers
-                            </h3>
+                            </h4>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--2">
                                     Shop
@@ -81,9 +82,9 @@ export default function Categories(props) {
                                 src={earphonesImg}
                                 alt=""
                             />
-                            <h3 className="categories__heading heading-small">
+                            <h4 className="categories__heading heading-small">
                                 Earphones
-                            </h3>
+                            </h4>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--3">
                                     Shop
