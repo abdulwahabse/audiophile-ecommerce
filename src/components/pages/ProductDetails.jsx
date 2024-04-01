@@ -124,9 +124,9 @@ export default function ProductDetails(props) {
                             </h3>
                         )}
 
-                        <h2 className="product-details__heading heading-medium">
+                        <h1 className="product-details__heading heading-medium">
                             {product.name}
-                        </h2>
+                        </h1>
                         <p className="product-details__desription paragraph-in-light-bg">
                             {product.description}
                         </p>
@@ -234,9 +234,9 @@ export default function ProductDetails(props) {
                     </div>
                     {/* Other products */}
                     <div className="product-details__other-products-container">
-                        <h2 className="product-details__other-products-heading heading-medium-grows-2">
+                        <h3 className="product-details__other-products-heading heading-medium-grows-2">
                             You May Also Like
-                        </h2>
+                        </h3>
                         <div className="product-details__other-products-list">
                             {otherProducts}
                         </div>

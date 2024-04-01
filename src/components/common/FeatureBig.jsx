@@ -34,9 +34,9 @@ export default function FeatureBig(props) {
                         </picture>
                     </div>
                     <div className="feature-big__text">
-                        <h2 className="feature-big__heading heading-large light-text">
+                        <h3 className="feature-big__heading heading-large light-text">
                             {featuredProduct.name}
-                        </h2>
+                        </h3>
                         <p className="feature-big__paragraph paragraph-in-dark-bg">
                             Upgrade to premium speakers that are phenomenally
                             built to deliver truly remarkable sound.

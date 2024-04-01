@@ -21,10 +21,10 @@ export default function About() {
                     />
                 </picture>
                 <div className="about__text-container">
-                    <h2 className="about__heading heading-medium-grows">
+                    <h3 className="about__heading heading-medium-grows">
                         BRINGING YOU THE{' '}
                         <span className="primary-text">BEST</span> AUDIO GEAR
-                    </h2>
+                    </h3>
                     <p className="about__paragraph paragraph-in-light-bg">
                         Located at the heart of New York City, Audiophile is the
                         premier store for high end headphones, earphones,

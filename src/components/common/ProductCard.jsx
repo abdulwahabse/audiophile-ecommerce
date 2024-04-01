@@ -25,9 +25,9 @@ export default function ProductCard(props) {
             </div>
             <div className="product-card__description-container">
                 {props.isNew && (
-                    <h3 className="product-card__highlighted highlighted-text dark-primary">
+                    <span className="product-card__highlighted highlighted-text dark-primary">
                         New Product
-                    </h3>
+                    </span>
                 )}
                 <h2 className="product-card__heading heading-medium">
                     {props.productName} {props.category}

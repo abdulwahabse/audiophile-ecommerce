@@ -34,7 +34,7 @@ export default function FeatureMedTwo(props) {
                     </picture>
                 </div>
                 <div className="feature-md-2__text-container">
-                    <h2 className="heading-medium">{name}</h2>
+                    <h3 className="heading-medium">{name}</h3>
                     <Link
                         to={`/${featuredProduct.category}/${featuredProduct.id}`}
                         className="btn btn-outline-secondary"

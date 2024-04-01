@@ -25,9 +25,9 @@ export default function Categories(props) {
                                 src={headphonesImg}
                                 alt=""
                             />
-                            <h2 className="categories__heading heading-small">
+                            <h3 className="categories__heading heading-small">
                                 Headphones
-                            </h2>
+                            </h3>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--1">
                                     Shop
@@ -53,9 +53,9 @@ export default function Categories(props) {
                                 src={speakersImg}
                                 alt=""
                             />
-                            <h2 className="categories__heading heading-small">
+                            <h3 className="categories__heading heading-small">
                                 Speakers
-                            </h2>
+                            </h3>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--2">
                                     Shop
@@ -81,9 +81,9 @@ export default function Categories(props) {
                                 src={earphonesImg}
                                 alt=""
                             />
-                            <h2 className="categories__heading heading-small">
+                            <h3 className="categories__heading heading-small">
                                 Earphones
-                            </h2>
+                            </h3>
                             <div className="categories__cta">
                                 <p className="categories__cta-text categories__cta-text--3">
                                     Shop

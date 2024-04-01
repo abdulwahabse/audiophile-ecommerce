@@ -26,9 +26,9 @@ export default function ProductList(props) {
         <>
             <section className="product-list">
                 <div className="product-list__heading-container">
-                    <h2 className="product-list__heading heading-medium-grows light-text">
+                    <h1 className="product-list__heading heading-medium-grows light-text">
                         {props.category}
-                    </h2>
+                    </h1>
                 </div>
                 <div className="product-list__container container">
                     {productCards}

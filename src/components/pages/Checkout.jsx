@@ -120,13 +120,13 @@ export default function Checkout(props) {
                 <div className="checkout__container container">
                     <BackBtn />
                     <div className="checkout__form-container">
-                        <h2 className="checkout__form-heading heading-medium">
+                        <h1 className="checkout__form-heading heading-medium">
                             Checkout
-                        </h2>
+                        </h1>
 
-                        <p className="checkout__form-subheading checkout__form-subheading--billing">
+                        <h2 className="checkout__form-subheading checkout__form-subheading--billing">
                             Billing Details
-                        </p>
+                        </h2>
 
                         <Input
                             className="checkout__input--name"
@@ -164,9 +164,9 @@ export default function Checkout(props) {
                             required={true}
                         />
 
-                        <p className="checkout__form-subheading checkout__form-subheading--shipping">
+                        <h2 className="checkout__form-subheading checkout__form-subheading--shipping">
                             Shipping Info
-                        </p>
+                        </h2>
 
                         <Input
                             className="checkout__input--address"
@@ -216,9 +216,9 @@ export default function Checkout(props) {
                             required={true}
                         />
 
-                        <p className="checkout__form-subheading checkout__form-subheading--payment">
+                        <h2 className="checkout__form-subheading checkout__form-subheading--payment">
                             Payment Details
-                        </p>
+                        </h2>
 
                         <p className="checkout__label checkout__label--payment">
                             Payment Method

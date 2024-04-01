@@ -32,9 +32,9 @@ export default function FeatureMedOne(props) {
                         />
                     </picture>
                     <div className="feature-md-1__text-container">
-                        <h2 className="heading-medium">
+                        <h3 className="heading-medium">
                             {featuredProduct.name}
-                        </h2>
+                        </h3>
                         <Link
                             to={`/${featuredProduct.category}/${featuredProduct.id}`}
                             className="btn btn-outline-secondary"

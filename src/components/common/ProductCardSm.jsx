@@ -20,9 +20,9 @@ export default function ProductCardSm(props) {
                     />
                 </picture>
             </div>
-            <h2 className="product-card-sm__heading heading-medium text-center">
+            <h4 className="product-card-sm__heading heading-medium text-center">
                 {props.productName}
-            </h2>
+            </h4>
             <Link
                 to={`/${props.category}/${props.id}`}
                 className="product-card-sm__btn btn btn-primary"
