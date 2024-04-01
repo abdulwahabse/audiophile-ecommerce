@@ -6,10 +6,8 @@ export default function About() {
     const mobileImg = getImageUrl('images/shared/mobile/image-best-gear.jpg');
 
     return (
-        <section
-            aria-label="About Us"
-            className="about margin-t-lg margin-b-lg"
-        >
+        <section className="about margin-t-lg margin-b-lg">
+            <h3 className="visually-hidden">About Us</h3>
             <div className="about__container container">
                 <picture>
                     <source media="(min-width: 77.56em)" srcSet={desktopImg} />
@@ -21,10 +19,10 @@ export default function About() {
                     />
                 </picture>
                 <div className="about__text-container">
-                    <h3 className="about__heading heading-medium-grows">
+                    <h4 className="about__heading heading-medium-grows">
                         BRINGING YOU THE{' '}
                         <span className="primary-text">BEST</span> AUDIO GEAR
-                    </h3>
+                    </h4>
                     <p className="about__paragraph paragraph-in-light-bg">
                         Located at the heart of New York City, Audiophile is the
                         premier store for high end headphones, earphones,
