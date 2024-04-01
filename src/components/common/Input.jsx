@@ -4,6 +4,7 @@ export default function Input(props) {
             <div className="input__label-container">
                 <label className="input__label" htmlFor={props.id}>
                     {props.label}
+                    {props.required && <span className="mandatory">*</span>}
                 </label>
             </div>
             <input
@@ -15,6 +16,7 @@ export default function Input(props) {
                 value={props.value}
                 onChange={props.onChange}
                 required={props.required}
+                aria-required={props.required}
             />
         </div>
     );

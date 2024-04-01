@@ -221,7 +221,7 @@ export default function Checkout(props) {
                         </h2>
 
                         <p className="checkout__label checkout__label--payment">
-                            Payment Method
+                            Payment Method <span className="mandatory">*</span>
                         </p>
 
                         <InputRadio
