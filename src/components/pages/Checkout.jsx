@@ -279,7 +279,7 @@ export default function Checkout(props) {
                                     src={getImageUrl(
                                         'icons/icon-cash-on-delivery.svg'
                                     )}
-                                    alt="Cash on Delivery"
+                                    alt=""
                                 />
                                 <p className="paragraph-in-light-bg">
                                     The ‘Cash on Delivery’ option enables you to

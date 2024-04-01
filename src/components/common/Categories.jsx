@@ -23,7 +23,7 @@ export default function Categories(props) {
                             <img
                                 className="categories__image"
                                 src={headphonesImg}
-                                alt="headphones"
+                                alt=""
                             />
                             <h2 className="categories__heading heading-small">
                                 Headphones
@@ -35,7 +35,7 @@ export default function Categories(props) {
                                 <img
                                     className="categories__cta-icon categories__cta-icon--1"
                                     src={arrowIcon}
-                                    alt="arrow right"
+                                    alt=""
                                 />
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default function Categories(props) {
                             <img
                                 className="categories__image"
                                 src={speakersImg}
-                                alt="headphones"
+                                alt=""
                             />
                             <h2 className="categories__heading heading-small">
                                 Speakers
@@ -63,7 +63,7 @@ export default function Categories(props) {
                                 <img
                                     className="categories__cta-icon categories__cta-icon--2"
                                     src={arrowIcon}
-                                    alt="arrow right"
+                                    alt=""
                                 />
                             </div>
                         </div>
@@ -79,7 +79,7 @@ export default function Categories(props) {
                             <img
                                 className="categories__image categories__image--3"
                                 src={earphonesImg}
-                                alt="headphones"
+                                alt=""
                             />
                             <h2 className="categories__heading heading-small">
                                 Earphones
@@ -91,7 +91,7 @@ export default function Categories(props) {
                                 <img
                                     className="categories__cta-icon categories__cta-icon--3"
                                     src={arrowIcon}
-                                    alt="arrow right"
+                                    alt=""
                                 />
                             </div>
                         </div>
