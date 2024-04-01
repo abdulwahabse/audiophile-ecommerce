@@ -17,6 +17,7 @@ export default function Input(props) {
                 onChange={props.onChange}
                 required={props.required}
                 aria-required={props.required}
+                autoComplete={props.autoComplete}
             />
         </div>
     );

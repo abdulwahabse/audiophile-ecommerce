@@ -132,8 +132,9 @@ export default function Checkout(props) {
                             className="checkout__input--name"
                             id="name"
                             label="Name"
+                            autoComplete="name"
                             type="text"
-                            placeholder="Abdul Wahab"
+                            placeholder="Full Name"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
@@ -144,8 +145,9 @@ export default function Checkout(props) {
                             className="checkout__input--email"
                             id="email"
                             label="Email Address"
+                            autoComplete="email"
                             type="email"
-                            placeholder="abdulwahabse@outlook.com"
+                            placeholder="Email Address"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
@@ -156,8 +158,9 @@ export default function Checkout(props) {
                             className="checkout__input--phone"
                             id="phone"
                             label="Phone Number"
+                            autoComplete="tel"
                             type="tel"
-                            placeholder="+49 333 1234567"
+                            placeholder="Phone Number"
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
@@ -172,8 +175,9 @@ export default function Checkout(props) {
                             className="checkout__input--address"
                             id="address"
                             label="Your Address"
+                            autoComplete="address-line1"
                             type="text"
-                            placeholder="Saarbrücken, Germany"
+                            placeholder="Street"
                             name="address"
                             value={formData.address}
                             onChange={handleChange}
@@ -185,7 +189,8 @@ export default function Checkout(props) {
                             id="zip"
                             label="ZIP Code"
                             type="text"
-                            placeholder="66125"
+                            autoComplete="postal-code"
+                            placeholder="ZIP Code"
                             name="zip"
                             value={formData.zip}
                             onChange={handleChange}
@@ -197,7 +202,8 @@ export default function Checkout(props) {
                             id="city"
                             label="City"
                             type="text"
-                            placeholder="Saarbrücken"
+                            placeholder="City"
+                            autoComplete="address-level2"
                             name="city"
                             value={formData.city}
                             onChange={handleChange}
@@ -209,7 +215,8 @@ export default function Checkout(props) {
                             id="country"
                             label="Country"
                             type="text"
-                            placeholder="Germany"
+                            autoComplete="country"
+                            placeholder="Country"
                             name="country"
                             value={formData.country}
                             onChange={handleChange}
